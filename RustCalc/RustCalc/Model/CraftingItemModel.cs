@@ -1,4 +1,6 @@
-﻿using MyLibrary.SelectPanel;
+﻿using System.Collections.ObjectModel;
+using System.ComponentModel.Design.Serialization;
+using MyLibrary.SelectPanel;
 
 namespace RustCalc.Model
 { 
@@ -8,11 +10,15 @@ namespace RustCalc.Model
         private string _imageUri;
         private bool _isSelected;
 
-        public CraftingItemModel(string name, string imageUri)
+        private ObservableCollection<Component> _components; 
+
+        public CraftingItemModel(string name, string imageUri, ObservableCollection<Component> components)
         {
             Name = name;
             ImageUri = imageUri;
             IsSelected = false;
+
+            Components = components;
         }
 
         public string Name
@@ -44,6 +50,16 @@ namespace RustCalc.Model
                 OnPropertyChanged();
             }
         }
+
+        public ObservableCollection<Component> Components
+        {
+            get { return _components; }
+            set
+            {
+                _components = value;
+                OnPropertyChanged();
+            }
+        } 
     }
 
     

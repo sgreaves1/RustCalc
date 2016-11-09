@@ -60,6 +60,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Model\BaseModel.cs" />
+    <Compile Include="Model\Component.cs" />
     <Compile Include="Model\CraftingItemModel.cs" />
     <Compile Include="UserControl\CraftingDetails.xaml.cs">
       <DependentUpon>CraftingDetails.xaml</DependentUpon>
