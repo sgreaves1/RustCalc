@@ -11,9 +11,9 @@ namespace RustCalc.ViewModel
 
         public MainWindowViewModel()
         {
-            CraftableItems.Add(new CraftingItemModel("Rocket"));
-            CraftableItems.Add(new CraftingItemModel("Satchel Charge"));
-            CraftableItems.Add(new CraftingItemModel("Timed Mine"));
+            CraftableItems.Add(new CraftingItemModel("Rocket", "http://vignette1.wikia.nocookie.net/play-rust/images/9/95/Rocket_icon.png/revision/latest?cb=20151106061039"));
+            CraftableItems.Add(new CraftingItemModel("Satchel Charge", "http://vignette2.wikia.nocookie.net/play-rust/images/0/0b/Satchel_Charge_icon.png/revision/latest?cb=20160813023035"));
+            CraftableItems.Add(new CraftingItemModel("Timed Mine", "http://vignette1.wikia.nocookie.net/play-rust/images/6/6c/Timed_Explosive_Charge_icon.png/revision/latest?cb=20151106061610"));
         }
 
         public ObservableCollection<IPanelItem> CraftableItems

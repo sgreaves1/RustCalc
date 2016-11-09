@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using MyLibrary.SelectPanel;
+using RustCalc.Model;
 
 namespace RustCalc.UserControl
 {
@@ -10,7 +11,7 @@ namespace RustCalc.UserControl
     {
         public static readonly DependencyProperty ItemProperty =
             DependencyProperty.Register("Item", 
-                typeof(IPanelItem), 
+                typeof(CraftingItemModel), 
                 typeof(CraftingDetails), 
                 new PropertyMetadata(null));
         
@@ -19,9 +20,9 @@ namespace RustCalc.UserControl
             InitializeComponent();
         }
 
-        public IPanelItem Item
+        public CraftingItemModel Item
         {
-            get { return (IPanelItem)GetValue(ItemProperty); }
+            get { return (CraftingItemModel)GetValue(ItemProperty); }
             set { SetValue(ItemProperty, value); }
         }
     }

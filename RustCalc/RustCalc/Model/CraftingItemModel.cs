@@ -5,11 +5,13 @@ namespace RustCalc.Model
     public class CraftingItemModel : BaseModel, IPanelItem
     {
         private string _name;
+        private string _imageUri;
         private bool _isSelected;
 
-        public CraftingItemModel(string name)
+        public CraftingItemModel(string name, string imageUri)
         {
             Name = name;
+            ImageUri = imageUri;
             IsSelected = false;
         }
 
@@ -19,6 +21,16 @@ namespace RustCalc.Model
             set
             {
                 _name = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public string ImageUri
+        {
+            get { return _imageUri; }
+            set
+            {
+                _imageUri = value;
                 OnPropertyChanged();
             }
         }
