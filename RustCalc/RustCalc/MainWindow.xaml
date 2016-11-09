@@ -4,16 +4,26 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:myLibrary="clr-namespace:MyLibrary;assembly=MyLibrary"
+        xmlns:userControl="clr-namespace:RustCalc.UserControl"
         mc:Ignorable="d"
         Title="Rust Calculator" Height="350" Width="525">
-    <StackPanel>
-        <myLibrary:SelectPanelUc 
-            HorizontalAlignment="Left"
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <myLibrary:SelectPanelUc
+            Grid.Column="0"
             ItemsSource="{Binding Path=CraftableItems}" 
-            SelectedItem="{Binding Path=SelectedItem}"
+            SelectedItem="{Binding Path=SelectedItem, Mode=TwoWay}"
             Width="100"
             Height="300"
             Margin="10,10,10,10"
             /> 
-    </StackPanel>
+        <userControl:CraftingDetails 
+            Grid.Column="1"
+            HorizontalAlignment="Center"
+            Item="{Binding Path=SelectedItem}" 
+            />
+    </Grid>
 </Window>
