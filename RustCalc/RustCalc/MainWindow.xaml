@@ -5,10 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:myLibrary="clr-namespace:MyLibrary;assembly=MyLibrary"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        <myLibrary:SelectPanelUc>
-            
-        </myLibrary:SelectPanelUc> 
-    </Grid>
+        Title="Rust Calculator" Height="350" Width="525">
+    <StackPanel>
+        <myLibrary:SelectPanelUc 
+            ItemsSource="{Binding Path=CraftableItems}" 
+            Width="100"
+            Margin="10,10,10,10"
+            /> 
+    </StackPanel>
 </Window>

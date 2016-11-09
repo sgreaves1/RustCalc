@@ -1,21 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.ObjectModel;
+using MyLibrary.SelectPanel;
 using RustCalc.Model;
 
 namespace RustCalc.ViewModel
 {
     public class MainWindowViewModel : BaseViewModel
     {
-        private ObservableCollection<CraftingItemModel> _craftableItems = new ObservableCollection<CraftingItemModel>();
+        private ObservableCollection<IPanelItem> _craftableItems = new ObservableCollection<IPanelItem>();
 
-        public ObservableCollection<CraftingItemModel> CraftableItem
+        public MainWindowViewModel()
+        {
+            CraftableItems.Add(new CraftingItemModel("Rocket"));
+        }
+
+        public ObservableCollection<IPanelItem> CraftableItems
         {
             get { return _craftableItems; }
-            set { _craftableItems = value; }
+            set
+            {
+                _craftableItems = value;
+                OnPropertyChanged();
+            }
         }  
     }
 }
