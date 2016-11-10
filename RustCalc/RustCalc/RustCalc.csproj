@@ -65,6 +65,9 @@
     <Compile Include="UserControl\CraftingDetails.xaml.cs">
       <DependentUpon>CraftingDetails.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControl\ItemsList.xaml.cs">
+      <DependentUpon>ItemsList.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\BaseViewModel.cs" />
     <Compile Include="ViewModel\MainWindowViewModel.cs" />
     <Page Include="MainWindow.xaml">
@@ -80,6 +83,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="UserControl\CraftingDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl\ItemsList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
