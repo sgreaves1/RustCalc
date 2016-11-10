@@ -1,12 +1,15 @@
-﻿namespace RustCalc.Model
+﻿using MyLibrary.SelectPanel;
+
+namespace RustCalc.Model
 {
-    public class Component : BaseModel
+    public class Component : BaseModel, IPanelItem
     {
         private string _name;
 
         public Component(string name)
         {
             Name = name;
+            IsSelected = false;
         }
 
         public string Name
@@ -18,5 +21,7 @@
                 OnPropertyChanged();
             }
         }
+
+        public bool IsSelected { get; set; }
     }
 }

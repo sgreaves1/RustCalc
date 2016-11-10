@@ -15,7 +15,7 @@
 
         <userControl:ItemsList Title="Recipe:" />
         <userControl:ItemsList Title="Raw Materials:" />
-        <userControl:ItemsList Title="Components:" />
+        <userControl:ItemsList Title="Components:" ItemsSource="{Binding ElementName=Root, Path=Item.Components, UpdateSourceTrigger=PropertyChanged}" />
         
     </StackPanel>
 </UserControl>

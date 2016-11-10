@@ -59,6 +59,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Converters\DebugDataBindingConverter.cs" />
     <Compile Include="Model\BaseModel.cs" />
     <Compile Include="Model\Component.cs" />
     <Compile Include="Model\CraftingItemModel.cs" />
