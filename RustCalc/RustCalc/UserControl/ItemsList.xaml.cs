@@ -1,6 +1,7 @@
 ﻿using System.Collections.ObjectModel;
 using System.Windows;
 using MyLibrary.SelectPanel;
+using RustCalc.Model;
 
 namespace RustCalc.UserControl
 {
@@ -19,7 +20,7 @@ namespace RustCalc.UserControl
         // Using a DependencyProperty as the backing store for MyProperty.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty ItemsSourceProperty =
             DependencyProperty.Register("ItemsSource", 
-                typeof(ObservableCollection<IPanelItem>), 
+                typeof(ObservableCollection<IListItem>), 
                 typeof(ItemsList), 
                 new PropertyMetadata(null));
         
@@ -34,9 +35,9 @@ namespace RustCalc.UserControl
             set { SetValue(TitleProperty, value); }
         }
 
-        public ObservableCollection<IPanelItem> ItemsSource
+        public ObservableCollection<IListItem> ItemsSource
         {
-            get { return (ObservableCollection<IPanelItem>)GetValue(ItemsSourceProperty); }
+            get { return (ObservableCollection<IListItem>)GetValue(ItemsSourceProperty); }
             set { SetValue(ItemsSourceProperty, value); }
         }
     }

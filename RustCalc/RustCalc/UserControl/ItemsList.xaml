@@ -27,10 +27,16 @@
             </ItemsControl.ItemsPanel>
             
             <ItemsControl.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel>
-                        <Label Content="{Binding Path=Name}"/>
-                    </StackPanel>
+                <DataTemplate> 
+                    <StackPanel >
+                        <Border BorderThickness="1" BorderBrush="Black" CornerRadius="6">
+
+                            <Image Source="{Binding Path=ImageSource}" Width="45" Height="45" HorizontalAlignment="Center"/>
+                            
+                        
+                        </Border>
+                        <Label Content="{Binding Path=Quantity}" HorizontalAlignment="Center"/>
+                </StackPanel>
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
             

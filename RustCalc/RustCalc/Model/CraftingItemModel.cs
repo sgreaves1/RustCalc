@@ -9,9 +9,9 @@ namespace RustCalc.Model
         private string _imageUri;
         private bool _isSelected;
 
-        private ObservableCollection<IPanelItem> _components; 
+        private ObservableCollection<IListItem> _components; 
 
-        public CraftingItemModel(string name, string imageUri, ObservableCollection<IPanelItem> components)
+        public CraftingItemModel(string name, string imageUri, ObservableCollection<IListItem> components)
         {
             Name = name;
             ImageUri = imageUri;
@@ -50,7 +50,7 @@ namespace RustCalc.Model
             }
         }
 
-        public ObservableCollection<IPanelItem> Components
+        public ObservableCollection<IListItem> Components
         {
             get { return _components; }
             set
