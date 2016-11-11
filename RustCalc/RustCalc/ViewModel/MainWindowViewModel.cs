@@ -14,7 +14,7 @@ namespace RustCalc.ViewModel
             CraftableItems.Add(new CraftingItemModel(
                 "Rocket", 
                 "http://vignette1.wikia.nocookie.net/play-rust/images/9/95/Rocket_icon.png/revision/latest?cb=20151106061039",
-                new ObservableCollection<IListItem>() {new Component("Metal Pipe", 1, "http://vignette2.wikia.nocookie.net/play-rust/images/4/4a/Metal_Pipe_icon.png/revision/latest?cb=20161109045929" )}));
+                new ObservableCollection<IListItem>() {new Component("Metal Pipe", 2, "http://vignette2.wikia.nocookie.net/play-rust/images/4/4a/Metal_Pipe_icon.png/revision/latest?cb=20161109045929" )}));
 
             CraftableItems.Add(new CraftingItemModel(
                 "Satchel Charge", 
