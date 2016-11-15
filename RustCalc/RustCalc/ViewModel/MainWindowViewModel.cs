@@ -1,5 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 using MyLibrary.SelectPanel;
+using RustCalc.Helper;
 using RustCalc.Model;
 
 namespace RustCalc.ViewModel
@@ -13,17 +14,20 @@ namespace RustCalc.ViewModel
         {
             CraftableItems.Add(new CraftingItemModel(
                 "Rocket", 
-                "http://vignette1.wikia.nocookie.net/play-rust/images/9/95/Rocket_icon.png/revision/latest?cb=20151106061039",
-                new ObservableCollection<IListItem>() {new Component("Metal Pipe", 2, "http://vignette2.wikia.nocookie.net/play-rust/images/4/4a/Metal_Pipe_icon.png/revision/latest?cb=20161109045929" )}));
+                ImageUrlStore.GetImageUri("Rocket"),
+                new ObservableCollection<IListItem>() {new ItemModel("Gun Powder", 150, ImageUrlStore.GetImageUri("Gun Powder")), new ItemModel("Explosives", 10, ImageUrlStore.GetImageUri("Explosives")) }, 
+                new ObservableCollection<IListItem>() {new ItemModel("Metal Pipe", 2, "http://vignette2.wikia.nocookie.net/play-rust/images/4/4a/Metal_Pipe_icon.png/revision/latest?cb=20161109045929" )}));
 
             CraftableItems.Add(new CraftingItemModel(
-                "Satchel Charge", 
-                "http://vignette2.wikia.nocookie.net/play-rust/images/0/0b/Satchel_Charge_icon.png/revision/latest?cb=20160813023035",
+                "Satchel Charge",
+                ImageUrlStore.GetImageUri("Satchel Charge"),
+                new ObservableCollection<IListItem>(),
                 new ObservableCollection<IListItem>()));
 
             CraftableItems.Add(new CraftingItemModel(
                 "Timed Mine", 
-                "http://vignette1.wikia.nocookie.net/play-rust/images/6/6c/Timed_Explosive_Charge_icon.png/revision/latest?cb=20151106061610",
+                ImageUrlStore.GetImageUri("Timed Mine"),
+                new ObservableCollection<IListItem>(),
                 new ObservableCollection<IListItem>()));
         }
 

@@ -1,12 +1,12 @@
 ﻿namespace RustCalc.Model
 {
-    public class Component : BaseModel, IListItem
+    public class ItemModel : BaseModel, IListItem
     {
         private string _name;
         private string _imageSource;
         private int _quantity;
 
-        public Component(string name, int quantity, string image)
+        public ItemModel(string name, int quantity, string image)
         {
             Name = name;
             ImageSource = image;

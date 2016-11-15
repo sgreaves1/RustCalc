@@ -9,15 +9,19 @@ namespace RustCalc.Model
         private string _imageUri;
         private bool _isSelected;
 
-        private ObservableCollection<IListItem> _components; 
+        private ObservableCollection<IListItem> _components;
 
-        public CraftingItemModel(string name, string imageUri, ObservableCollection<IListItem> components)
+        private ObservableCollection<IListItem> _recipeItems; 
+
+        public CraftingItemModel(string name, string imageUri, ObservableCollection<IListItem> recipeItems, ObservableCollection<IListItem> components)
         {
             Name = name;
             ImageUri = imageUri;
             IsSelected = false;
 
             Components = components;
+
+            RecipeItems = recipeItems;
         }
 
         public string Name
@@ -58,7 +62,17 @@ namespace RustCalc.Model
                 _components = value;
                 OnPropertyChanged();
             }
-        } 
+        }
+
+        public ObservableCollection<IListItem> RecipeItems
+        {
+            get { return _recipeItems; }
+            set
+            {
+                _recipeItems = value;
+                OnPropertyChanged();
+            }
+        }
     }
 
     
