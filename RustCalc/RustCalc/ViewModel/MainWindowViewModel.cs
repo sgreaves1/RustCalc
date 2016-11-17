@@ -16,7 +16,7 @@ namespace RustCalc.ViewModel
                 "Rocket", 
                 ImageUrlStore.GetImageUri("Rocket"),
                 new ObservableCollection<IListItem>() {new ItemModel("Gun Powder", 150, ImageUrlStore.GetImageUri("Gun Powder")), new ItemModel("Explosives", 10, ImageUrlStore.GetImageUri("Explosives")) }, 
-                new ObservableCollection<IListItem>() {new ItemModel("Metal Pipe", 2, "http://vignette2.wikia.nocookie.net/play-rust/images/4/4a/Metal_Pipe_icon.png/revision/latest?cb=20161109045929" )}));
+                new ObservableCollection<IListItem>() {new ItemModel("Metal Pipe", 2, ImageUrlStore.GetImageUri("Metal Pipe")) }));
 
             CraftableItems.Add(new CraftingItemModel(
                 "Satchel Charge",
